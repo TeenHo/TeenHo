@@ -13,6 +13,7 @@ public class random_maze {
 		String[] element3 = new String[] {"-", " "};
 		String[] element4 = new String[] {"|", "+"};
 		String[] element5 = new String[] {"|", " "};
+		String[] element6 = new String[] {"+", " "};
 	
 		//generation start element of the maze
 		maze[0][0] = element1[(int)(Math.random() * 10) / 3];
@@ -52,7 +53,7 @@ public class random_maze {
 					if (maze[i][j - 1] == " ") {
 						if (maze[i - 1][j] == " ") {
 							if (maze[i - 1][j - 1] == " ")
-								maze[i][j] = "+";
+								maze[i][j] = element6[(int)(Math.random() * 10) / 5];
 							else
 								maze[i][j] = " ";
 						}
