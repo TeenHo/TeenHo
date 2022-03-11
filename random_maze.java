@@ -3,9 +3,9 @@ package my_lessons;
 public class random_maze {
 
 	public static void main(String[] args) {
-		//длина лабиринта
+		//length of the maze
 		int a = 30;
-		//ширина лабиринта
+		//width of the maze
 		int b = 30;
 		String[][] maze = new String[a][b];
 		String[] element1 = new String[] {"+", "-", "|", " "};
@@ -14,11 +14,11 @@ public class random_maze {
 		String[] element4 = new String[] {"|", "+"};
 		String[] element5 = new String[] {"|", " "};
 	
-		//формирование начального элемента лабиринта
+		//generation start element of the maze
 		maze[0][0] = element1[(int)(Math.random() * 10) / 3];
 		System.out.print(maze[0][0]);
 		
-		//заполнение горизонтальной границы лабиринта
+		//generation first row of the maze
 		for (int i = 1; i < a; i++) {
 			if (maze[i - 1][0] == " ")
 				maze[i][0] = "+";
@@ -33,7 +33,7 @@ public class random_maze {
 		
 		System.out.println();
 		
-		//заполнение вертикальной границы лабиринта
+		//generation first column of the maze
 		for (int j = 1; j < b; j++) {
 			if (maze[0][j - 1] == " ")
 				maze[0][j] = element2[(int)(Math.random() * 10) / 5];
@@ -45,7 +45,7 @@ public class random_maze {
 				maze[0][j] = element5[(int)(Math.random() * 10) / 5];
 		}
 		
-		//заполнение оставшейся зоны лабиринта
+		//generation others elements of the maze
 		for (int j = 1; j < b; j++) {
 			for (int i = 0; i < a; i++) {
 				if (i > 0) {
