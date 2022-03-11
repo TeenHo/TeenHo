@@ -68,18 +68,12 @@ public class random_maze {
 					else if (maze[i][j - 1] == "|") {
 						if (maze[i - 1][j] == " ")
 							maze[i][j] = element4[(int)(Math.random() * 10) / 5];
-						else if (maze[i - 1][j] == "|")
-							maze[i][j] = "|";
 						else
 							maze[i][j] = "+";
 					}
 					
 					else if (maze[i][j - 1] == "-") {
-						if (maze[i - 1][j] == "-")
-							maze[i][j] = "-";
-						else
-							maze[i][j] = " ";
-					}
+						maze[i][j] = " ";
 					
 					else if (maze[i][j - 1] == "+"){
 						if (maze[i - 1][j] == " ")
